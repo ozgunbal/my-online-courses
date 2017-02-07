@@ -3,5 +3,5 @@
 
 ## Current Status (2/30)
 ## Finished Challenges
-Day 1 Javascript Drum Kit
-Day 2 JS and CSS Clock
+* Day 1 - Javascript Drum Kit
+* Day 2 - JS and CSS Clock
