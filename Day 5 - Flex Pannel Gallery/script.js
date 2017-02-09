@@ -1,7 +1,13 @@
 const panels = document.querySelectorAll('.panel');
 
 function toggleOpen () {
-  this.classList.toggle('open');
+  // if there's already active panel deactivate it
+  const activePanel = document.querySelector('.open-active');
+  if(activePanel) {
+    activePanel.classList.toggle('open');
+  }
+
+  this.classList.toggle('open');  
 }
 
 function toggleActive (e) {
