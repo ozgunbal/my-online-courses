@@ -1,7 +1,7 @@
 # JavaScript30
 30 Day Vanilla JS Coding Challenge by Wes Bos (https://javascript30.com)
 
-## Current Status (8/30)
+## Current Status (9/30)
 ## Finished Challenges
 * Day 1 - Javascript Drum Kit
 * Day 2 - JS and CSS Clock
@@ -11,3 +11,4 @@
 * Day 6 - Type Ahead
 * Day 7 - Array Cardio Part 2
 * Day 8 - Fun with HTML5 Canvas
+* Day 9 - Dev Tools Domination
