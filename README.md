@@ -1,7 +1,7 @@
 # JavaScript30
 30 Day Vanilla JS Coding Challenge by Wes Bos (https://javascript30.com)
 
-## Current Status (12/30)
+## Current Status (13/30)
 ## Finished Challenges
 * Day 1 - Javascript Drum Kit
 * Day 2 - JS and CSS Clock
@@ -15,3 +15,4 @@
 * Day 10 - Hold Shift and Check Checkboxes
 * Day 11 - Custom Video Player
 * Day 12 - Key Sequence Detection
+* Day 13 - Slide in on Scroll
