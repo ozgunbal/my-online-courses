@@ -1,6 +1,7 @@
 const addItems = document.querySelector('.add-items');
 const itemsList = document.querySelector('.plates');
 const items = JSON.parse(localStorage.getItem('items')) || [];
+const buttonsList = document.querySelectorAll('button');
 
 function addItem(e) {
     e.preventDefault();
@@ -35,7 +36,27 @@ function toggleDone(e) {
     localStorage.setItem('items', JSON.stringify(items));
 }
 
+function clear () {
+    items.length = 0;
+}
+
+function check () {
+    items.forEach(item => item.done = true);
+}
+
+function uncheck () {
+    items.forEach(item => item.done = false);
+}
+
+function handleActivity(e) {
+    const funcName = e.target.dataset.action;
+    window[funcName](); //calls clear, check or uncheck
+    populateList(items, itemsList);
+    localStorage.setItem('items', JSON.stringify(items));
+}
+
 addItems.addEventListener('submit', addItem);
 itemsList.addEventListener('click', toggleDone);
+buttonsList.forEach(button => button.addEventListener('click',handleActivity));
 
 populateList(items, itemsList);
