@@ -1,7 +1,7 @@
 # JavaScript30
 30 Day Vanilla JS Coding Challenge by Wes Bos (https://javascript30.com)
 
-## Current Status (16/30)
+## Current Status (17/30)
 ## Finished Challenges
 * Day 1 - Javascript Drum Kit
 * Day 2 - JS and CSS Clock
@@ -19,3 +19,4 @@
 * Day 14 - Javascript References Vs Copying
 * Day 15 - LocalStorage
 * Day 16 - Mouse Move Shadow
+* Day 17 - Sort Without Articles
