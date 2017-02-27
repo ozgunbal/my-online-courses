@@ -1,7 +1,7 @@
 # JavaScript30
 30 Day Vanilla JS Coding Challenge by Wes Bos (https://javascript30.com)
 
-## Current Status (20/30)
+## Current Status (21/30)
 ## Finished Challenges
 * Day 1 - Javascript Drum Kit
 * Day 2 - JS and CSS Clock
@@ -22,4 +22,5 @@
 * Day 17 - Sort Without Articles
 * Day 18 - Tally String Times with Reduce
 * Day 19 - Webcam Fun
+* Day 20 - Speech Recognition
 * Day 21 - Geolocation 
