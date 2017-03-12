@@ -1,7 +1,7 @@
 # JavaScript30
 30 Day Vanilla JS Coding Challenge by Wes Bos (https://javascript30.com)
 
-## Current Status (29/30)
+## Current Status (30/30) [FINISHED]
 ## Finished Challenges
 * Day 1 - Javascript Drum Kit
 * Day 2 - JS and CSS Clock
@@ -32,3 +32,4 @@
 * Day 27 - Click and Drag
 * Day 28 - Video Speed Controller
 * Day 29 - Countdown Timer
+* Day 30 - Whack A Mole
