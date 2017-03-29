@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>More Star Wars API Demo</title>
+</head>
+<body>
+    <div>
+        <h3> Select two Starships from the dropdown lists to compare </h3>
+        <select id="ship1"></select>
+        <select id="ship2"></select>
+        <button id="button">Compare</button>
+    </div>
+    <div>
+        <table id="table">
+            <tr>
+                <th></th>
+                <th>Starship 1</th>
+                <th>Starship 2</th>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>Cost</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>Speed</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>Cargo Size</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>Passengers</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+
+    <style>
+        table {
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+        td, th {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+    <script src="moreStarwarsApi.js"></script>
+</body>
+</html>

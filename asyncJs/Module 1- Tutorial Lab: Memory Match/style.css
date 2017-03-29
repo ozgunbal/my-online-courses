@@ -1,0 +1,34 @@
+html {
+    box-sizing: border-box;
+    background-color: skyblue;
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+    font-size: 20px;
+}
+*, *:before, *:after {box-sizing: inherit; }
+
+table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table, td {
+    border: 5px solid black;
+}
+
+td{
+    width:100px;
+    height:100px;
+    background-color: blue;
+}
+
+button {
+    margin: 15px;
+    padding: 10px;
+    border: 2px solid black;
+}
