@@ -7,11 +7,19 @@ import sampleFishes from '../sample-fishes';
 import base from '../base';
 
 const App = ({ match: { params: { storeId } } }) => {
-  const [fishes, setFishes] = useState({});
+  const [fishes, setFishes] = useState({ fishes: {} });
   const [order, setOrder] = useState(JSON.parse(localStorage.getItem(storeId)) || {});
 
   const addFish = (fish) => {
     setFishes({ ...fishes, [`fish${Date.now()}`]: fish });
+  }
+
+  const updateFish = (key, updatedFish) => {
+    const updatedFishes = { ...fishes, [key]: updatedFish };
+    setFishes(updatedFishes);
+    base.post(`${storeId}/fishes`, {
+      data: updatedFishes
+    });
   }
 
   const addOrder = key => {
@@ -52,7 +60,7 @@ const App = ({ match: { params: { storeId } } }) => {
         </ul>
       </div>
       <Order fishes={fishes} order={order} />
-      <Inventory addFish={addFish} loadSampleFishes={loadSampleFishes} />
+      <Inventory addFish={addFish} loadSampleFishes={loadSampleFishes} fishes={fishes} updateFish={updateFish} />
     </div>
   )
 }
