@@ -7,7 +7,7 @@ import sampleFishes from '../sample-fishes';
 import base from '../base';
 
 const App = ({ match: { params: { storeId } } }) => {
-  const [fishes, setFishes] = useState({ fishes: {} });
+  const [fishes, setFishes] = useState({});
   const [order, setOrder] = useState(JSON.parse(localStorage.getItem(storeId)) || {});
 
   const addFish = (fish) => {
@@ -21,6 +21,13 @@ const App = ({ match: { params: { storeId } } }) => {
       data: updatedFishes
     });
   }
+  const deleteFish = (key) => {
+    const updatedFishes = { ...fishes, [key]: null }
+    setFishes(updatedFishes);
+    base.post(`${storeId}/fishes`, {
+      data: updatedFishes
+    });
+  }
 
   const addOrder = key => {
     setOrder({
@@ -29,8 +36,17 @@ const App = ({ match: { params: { storeId } } }) => {
     })
   }
 
+  const deleteOrder = key => {
+    const orders = { ...order };
+    delete orders[key]
+    setOrder(orders);
+  }
+
   const loadSampleFishes = () => {
     setFishes({ ...fishes, ...sampleFishes });
+    base.post(`${storeId}/fishes`, {
+      data: { ...fishes, ...sampleFishes }
+    });
   }
 
   useEffect(() => {
@@ -59,8 +75,8 @@ const App = ({ match: { params: { storeId } } }) => {
           {Object.entries(fishes).map(([key, fish]) => <Fish key={key} details={fish} addOrder={() => addOrder(key)} />)}
         </ul>
       </div>
-      <Order fishes={fishes} order={order} />
-      <Inventory addFish={addFish} loadSampleFishes={loadSampleFishes} fishes={fishes} updateFish={updateFish} />
+      <Order fishes={fishes} order={order} deleteOrder={deleteOrder} />
+      <Inventory addFish={addFish} loadSampleFishes={loadSampleFishes} fishes={fishes} updateFish={updateFish} deleteFish={deleteFish} />
     </div>
   )
 }

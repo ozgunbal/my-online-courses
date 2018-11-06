@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EditFishForm = ({ fish, updateFish }) => {
+const EditFishForm = ({ fish, updateFish, deleteFish }) => {
   const handleChange = ({ currentTarget: { name, value } }) => {
     const updatedFish = {
       ...fish,
@@ -18,6 +18,7 @@ const EditFishForm = ({ fish, updateFish }) => {
       </select>
       <textarea name="desc" onChange={handleChange} value={fish.desc} />
       <input type="text" name="image" onChange={handleChange} value={fish.image} />
+      <button onClick={deleteFish}>Remove Fish</button>
     </div>
   );
 }
