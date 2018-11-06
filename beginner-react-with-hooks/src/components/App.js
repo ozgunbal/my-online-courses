@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header';
 import Inventory from './Inventory';
 import Order from './Order';
@@ -79,6 +80,10 @@ const App = ({ match: { params: { storeId } } }) => {
       <Inventory addFish={addFish} loadSampleFishes={loadSampleFishes} fishes={fishes} updateFish={updateFish} deleteFish={deleteFish} />
     </div>
   )
+}
+
+App.propTypes = {
+  match: PropTypes.object
 }
 
 export default App;

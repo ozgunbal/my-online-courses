@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { formatPrice } from '../helpers';
 
 const Fish = ({ addOrder, details: { name, image, price, desc, status } }) => {
@@ -15,5 +16,16 @@ const Fish = ({ addOrder, details: { name, image, price, desc, status } }) => {
     </li>
   )
 };
+
+Fish.propTypes = {
+  addOrder: PropTypes.func,
+  details: PropTypes.shape({
+    name: PropTypes.string,
+    image: PropTypes.string,
+    desc: PropTypes.string,
+    status: PropTypes.string,
+    price: PropTypes.number,
+  }),
+}
 
 export default Fish;

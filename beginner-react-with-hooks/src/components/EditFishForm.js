@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const EditFishForm = ({ fish, updateFish, deleteFish }) => {
   const handleChange = ({ currentTarget: { name, value } }) => {
@@ -21,6 +22,18 @@ const EditFishForm = ({ fish, updateFish, deleteFish }) => {
       <button onClick={deleteFish}>Remove Fish</button>
     </div>
   );
+}
+
+EditFishForm.propTypes = {
+  fish: PropTypes.shape({
+    name: PropTypes.string,
+    image: PropTypes.string,
+    desc: PropTypes.string,
+    status: PropTypes.string,
+    price: PropTypes.number,
+  }),
+  updatedFish: PropTypes.func,
+  deleteFish: PropTypes.func,
 }
 
 export default EditFishForm;

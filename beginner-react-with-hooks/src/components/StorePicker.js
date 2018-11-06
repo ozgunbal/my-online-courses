@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import { getFunName } from '../helpers';
 
 const StorePicker = ({ history }) => {
@@ -17,5 +18,8 @@ const StorePicker = ({ history }) => {
   )
 }
 
+StorePicker.propTypes = {
+  history: PropTypes.object
+}
 
 export default StorePicker;
