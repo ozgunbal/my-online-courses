@@ -77,7 +77,7 @@ const App = ({ match: { params: { storeId } } }) => {
         </ul>
       </div>
       <Order fishes={fishes} order={order} deleteOrder={deleteOrder} />
-      <Inventory addFish={addFish} loadSampleFishes={loadSampleFishes} fishes={fishes} updateFish={updateFish} deleteFish={deleteFish} />
+      <Inventory addFish={addFish} loadSampleFishes={loadSampleFishes} fishes={fishes} updateFish={updateFish} deleteFish={deleteFish} storeId={storeId} />
     </div>
   )
 }
