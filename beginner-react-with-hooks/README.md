@@ -8,3 +8,6 @@ In this project, [React Hooks](https://reactjs.org/docs/hooks-intro.html) is inv
 * [X] useState
 * [X] useEffect
 * [X] useRef
+
+## Contribution
+Don't be afraid to open an issue or to send a PR!
